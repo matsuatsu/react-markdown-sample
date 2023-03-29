@@ -37,9 +37,9 @@ const CodeBlock: FC<Props> = ({ inline, className, value }) => {
           padding: 1,
         }}
       >
-        <Box>{lang ? lang : ""}</Box>
+        <Box sx={{ margin: "auto 0" }}>{lang ? lang : ""}</Box>
         <Box sx={{ display: "flex", marginLeft: "auto" }}>
-          <div style={styleTooltip}>Copied!</div>
+          <div style={{ ...styleTooltip, margin: "auto 0" }}>Copied!</div>
           <CopyToClipboard text={value} onCopy={() => handleClick()}>
             <ContentCopyIcon fontSize="small" />
           </CopyToClipboard>
